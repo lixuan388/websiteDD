@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../../assets/layui/css/layui.css" media="all">
+<link rel="stylesheet" href="menu.css" media="all">
+    
+<script type="text/javascript" src="/Res/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Res/js/jquery-ui.js"></script>
+
+<script type="text/javascript" src="/Res/js/ECityAlert.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+  <div style="position: relative; height: 100%; padding: 10px;">
+    <div style="margin: 10px;">
+      <button class="layui-btn" lay-event="InsertFirstMenu">新增一级菜单</button>
+      <button class="layui-btn layui-btn-normal" lay-event="PostData">保存数据</button>
+    </div>
+    <ul id="lay-menu" lay-filter="lay-menu"></ul>
+  </div>
+  <script id="MenuLevel1" type="text/html">
+  <li class="level level1">
+    <a href="javascript:;" lay-event="titleEdit">
+      <span>{{ d.title}}</span>
+      <i class="layui-icon">&#xe642;</i>
+    </a>
+    <a href="javascript:;" class="layui-btn layui-btn-normal  layui-btn-xs" lay-event="AddMenu">
+      <span>增加下级菜单</span>
+    </a>
+  </li>
+</script>
+
+
+<script id="MenuLevel2" type="text/html">
+  <li class="level level2">
+    <a href="javascript:;" lay-event="titleEdit">
+      <span>{{d.title}}</span>
+      <i class="layui-icon">&#xe642;</i>
+    </a>
+    <a href="javascript:;" class="layui-btn layui-btn-danger  layui-btn-xs" lay-event="DelMenu">
+      <span>删除本菜单</span>
+    </a>
+    <div>
+      <ul class="manage-file-list clearfix" id="local_upload" style="position: relative;">
+{{#  layui.each(d.imageList, function(index, item){ }}
+
+        <li class="pic-item"  >
+          <div class="pic-img">
+            <img src="{{ item }}"><i class="layui-icon layui-icon-delete" lay-event="DelImage"></i>
+          </div>
+        </li>
+{{#  }); }}
+
+
+        <li id="add_again" class="add-item" style="display: block; z-index: 1;">
+          <input title="点击选择文件" multiple="" accept="*/*" id="file" style="position:absolute;opacity:0;top:0;left:0;width:100%;height:100%;cursor:pointer;" type="file" >
+          <i class="add-icon"></i>
+          <div class="add-txt">添加照片<br><span style="font-size: 12px;">建议上传尺寸1920*1080px<span></span></span></div>
+        </li>
+      </ul>
+    </div>
+  </li>
+</script>
+
+  <script src="../../assets/layui/layui.js"></script>
+  <script  src="menu.js?v12"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+li.level {
+  padding: 10px;
+  margin: 5px;
+  display: block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+  border: 1px solid #d2d2d2;
+  background-color: #fff;
+  z-index: 100;
+  border-radius: 2px;
+}
+
+.level1 a[lay-event=titleEdit] {
+  display: inline-block;
+  width: calc(100% - 80px - 10px - 10px);
+}
+
+.level2 a[lay-event=titleEdit] {
+  display: inline-block;
+  width: calc(100% - 80px - 4px);
+}
+.level2 a[lay-event="titleEdit"]::before {
+    content: "菜单名称:";
+    color:#939393;
+}
+.level2 a[lay-event=KeyWordEdit] {
+  display: inline-block;
+  width: calc(100%);
+  border: 1px solid silver;
+}
+.level2 a[lay-event="KeyWordEdit"]::before {
+    content: "关键字:";    
+    color:#939393;
+}
+
+.KeyWordEditDiv{
+  padding:10px;
+}
+[lay-event=AddMenu], [lay-event=DelMenu] {
+  width: 80px;
+  display: inline-block;
+}
+
+.up-list-div ul li .p2 {
+  float: left;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.up-list-div ul li .p2 .btn-ste {
+  float: left;
+  color: #fff;
+  width: 75px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  background: #546478;
+}
+
+.up-list-div ul li .p2 .btn-closed {
+  float: right;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: url(http://www.hcholiday.com/newtravel/public/images/btn-ico.png) no-repeat 4px -56px
+    #546478;
+}
+
+.up-list-div ul li .p2 span {
+  display: none;
+}
+
+.up-list-div ul li:hover .p2 span {
+  display: block
+}
+
+.up-list-div ul li .p2 span.ste-select {
+  background: green none repeat scroll 0% 0%;
+  display: block;
+}
+
+.manage-file-list .pic-item .pic-img {
+  display: block;
+  width: 267px;
+  height: 150px;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.manage-file-list {
+  padding: 8px;
+}
+
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.manage-file-list .pic-item {
+  float: left;
+  width: 148px;
+  height: 148px;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #e1e1e1;
+}
+
+.manage-file-list .pic-item {
+  height: 150px;
+  width: 267px;
+}
+
+.manage-file-list .pic-item {
+  cursor: pointer;
+}
+
+.manage-file-list .file-item .file-name, .manage-file-list .pic-item .pic-name {
+  color: #666;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.input-text {
+  font-size: 12px;
+  height: 30px;
+  *height: auto;
+  line-height: 1.42857;
+  padding: 4px 5px;
+}
+
+.input-text, .textarea {
+  box-sizing: border-box;
+  border: solid 1px #dedfe3;
+  width: 100%;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+
+.manage-file-list .add-item {
+  float: left;
+  width: 267px;
+  height: 150px;
+  margin: 8px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #e1e1e1;
+  background: #f4f4f4;
+}
+
+.manage-file-list .add-item .add-icon {
+  display: inline-block;
+  width: 57px;
+  height: 50px;
+  margin-top: 30px;
+  background: url("../../image/add-item-img.png") center no-repeat;
+}
+
+.manage-file-list .add-item .add-txt {
+  color: #999;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.pic-img img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pic-img:hover .layui-icon {
+  display: initial;
+}
+
+.pic-img .layui-icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  font-size: 30px;
+  background-color: #cfcfcf;
+  color: red;
+  bottom: 0;
+}

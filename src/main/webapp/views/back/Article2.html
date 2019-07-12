@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<script type="text/javascript" src="/Res/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../assets/layui/css/layui.css" media="all">
+  
+  <script type="text/javascript" src="/Res/js/ECityAlert.js"></script>
+  
+<script type="text/javascript" src="../../assets/js/ParameterData.js"></script>
+  <link rel="stylesheet" href="style/tabchild.css" media="all">
+	<title>大巅动态</title>
+</head>	
+<body>
+  <div style="padding: 10px;">
+    <button class="layui-btn" lay-event="InsertData" data-id="-1">新增文章</button>
+  </div>
+  
+  <table id="ArticleTable" lay-filter="ArticleTable"></table>
+  
+  <script type="text/html" id="CaptionTpl">
+    <a href="javascript:void(0);" class="layui-table-link" lay-event="InsertData" data-id="{{d.ID}}">{{d.Caption}}</a>
+  </script>
+  <script type="text/html" id="TypeTpl">
+    {{ArticleType[d.Type]}}
+  </script>
+  <script src="../../assets/layui/layui.js"></script>
+  <script src="../../assets/layui/init.js"></script>  
+  
+
+<script type="text/javascript">
+
+var ArticleType=GetParameterData('ArticleType');
+</script>
+  
+  
+  <script  src="Article2.js?11121"></script>
+</body>
+</html>

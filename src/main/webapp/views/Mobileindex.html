@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>大巅官网</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    
+
+<link rel="stylesheet" href="../assets/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../assets/style/admin.css" media="all">
+  <link rel="stylesheet" href="../assets/style/index.css" media="all">
+<script src="/Res/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277228488&web_id=1277228488"></script>
+</head>
+<body class="layui-layout-body">
+  <div id="LAY_app">
+    <div class="layui-layout layui-layout-admin">
+      <div class="layui-header">
+        <!-- 头部区域 -->
+        <ul class="layui-nav layui-layout-left " style="z-index: 1010;">
+          <!--
+          <li class="layui-nav-item" lay-unselect><a href="javascript:;" > 
+            <img src="../image/logo.png" alt="大巅" style="width: 40px; height: 40px;"> <span style="font-size: 1.5em; color: #fff;">大巅</span></a>
+          </li>
+          -->
+          <li class="layui-nav-item layadmin-flexible flexible" lay-unselect>
+            <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩" lay-tips="侧边伸缩">
+              <i class="layui-icon layui-icon-down" id="LAY_app_flexible" style="font-size: 2em;"></i>
+            </a>
+          </li>
+        </ul>       
+        <div class="layadmin-body-shade" layadmin-event="shade"></div>
+        <!-- 侧边菜单 -->
+        <div id='layui-side' class="layui-side layui-side-menu">
+          <div id ='layui-side-scroll' class="layui-side-scroll">
+            <ul class="layui-nav-temp layui-layout-right" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-layout-right"></ul>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!-- 主体内容 -->
+      <div class="layui-body" id="LAY_app_body">
+        <div class="layadmin-tabsbody-item" style="height: 100%; width: 100%; overflow: hidden;">
+          <iframe src="page.html" frameborder="0" class="layadmin-iframe" style="height: 100%; width: 100%; overflow: hidden;"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- 辅助元素，一般用于移动设备下遮罩 -->
+  </div>
+  <script src="../assets/layui/layui.js"></script>
+  <script>
+	layui.config({
+		base: '../assets/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+	</script>
+
+      
+</body>
+</html>

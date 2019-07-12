@@ -1,0 +1,94 @@
+
+body {
+  margin: 0px;
+}
+
+
+.layui-nav .layui-nav-item {
+  line-height: 40px;
+}
+.layui-layout-admin .layui-header {
+  height: 40px;
+}
+.layui-layout-admin .layui-body {
+  top: 40px;
+  left: 0;
+  bottom: 0;
+}
+
+.layui-layout-admin .layui-logo {
+    line-height: 40px;
+}
+
+.layui-layout-admin .layui-side {
+    top: 40px;
+    width: 220px;
+    overflow-x: hidden;
+}
+
+.layadmin-side-shrink .layui-side {
+    left: 0;
+    width: 60px;
+}
+
+.moblie .layui-nav .layui-nav-item.flexible
+{
+  display:inline-block;
+}
+.layui-nav .layui-nav-item.flexible
+{
+  display: none;
+}
+
+.moblie #LAY-system-side-menu
+{
+  background-color: #000;
+  position: fixed;
+  top: 40px;
+}
+
+.layui-layout-admin .layui-logo, .layui-layout-admin .layui-header .layui-nav .layui-nav-item {
+    height: 40px;
+    line-height: 40px;
+}
+
+.moblie .layui-layout-admin .layui-header .layui-nav .layui-nav-item {
+    height: inherit;
+}
+.moblie .layui-layout-admin .layui-header .layui-nav-child {
+    top: 0;
+}
+.moblie .layui-layout-admin .layui-header .layui-nav .layui-nav-child a {
+    color: #fff;
+}
+
+.layui-layout-admin .layui-header .layui-nav .layui-nav-child a {
+    color: #000;
+}
+.layadmin-tabspage-none .layui-layout-admin .layui-body {
+    top: 40px;
+}
+
+
+/*******************************************************/
+img.slide-li  {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 800px) {
+.slide-li img {
+    height: 100%;
+    width:initial;
+}
+
+}
+
+
+[title="站长统计"] {
+    display: none;
+}

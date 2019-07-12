@@ -1,0 +1,8 @@
+html{
+  height: 100%;
+}
+body{
+   height: calc(100% - 20px);
+   padding: 10px;
+}
+
